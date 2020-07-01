@@ -1,6 +1,6 @@
 # Berichtsheft
-Copyrights by Christopher Mogler
-Editor um einfach Berichtsheft zu schreiben
+Copyrights by Christopher Mogler   
+Editor um einfacher Berichtshefte zu schreiben
 
 ## LICENSE 
  Copyright 2020 Christopher Mogler
