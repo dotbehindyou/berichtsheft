@@ -1,0 +1,34 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+input {
+    border: none;
+    border-bottom: solid 1px;
+    width: 100%;
+}
+
+.bh-body textarea {
+    height: 200px;
+}
+
+textarea {
+    border: none;
+    width: 100%;
+    resize: none;
+}
+
+hr {
+    border-top: 1px solid rgb(0, 0, 0);
+}
