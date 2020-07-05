@@ -1,7 +1,14 @@
-﻿import React, { Component } from 'react';
+﻿import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-export class Head extends Component {
+type HeadProp = {
+    begin: string,
+    end: string,
+    year: number,
+    department: string
+};
+
+class Head extends React.Component<HeadProp, any> {
     render() {
         return (
             <div style={{ border: 'solid 1px', padding: '5px' }}>
@@ -19,7 +26,7 @@ export class Head extends Component {
                         </Col>
                         <Col md="2" style={{ borderRight: 'solid 1px' }}>
                             <Row>
-                                <Col md="12">Ausbildungsjahr</Col>
+                                <Col md="12"><p>Ausbildungsjahr</p></Col>
                             </Row>
                             <Row>
                                 <Col md="12"><input /></Col>
@@ -27,7 +34,7 @@ export class Head extends Component {
                         </Col>
                         <Col md="4">
                             <Row>
-                                <Col md="12">Betriebsabteilung, Arbeitsbereich:</Col>
+                                <Col md="12"><p>Betriebsabteilung, Arbeitsbereich:</p></Col>
                             </Row>
                             <Row>
                                 <Col md="12"><input /></Col>
@@ -38,3 +45,5 @@ export class Head extends Component {
         );
     }
 }
+
+export default Head;

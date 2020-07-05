@@ -1,7 +1,7 @@
-﻿import React, { Component } from 'react';
+﻿import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-export class Footer extends Component {
+class Footer extends React.Component {
     render() {
         return (
             <div>
@@ -38,3 +38,5 @@ export class Footer extends Component {
         );
     }
 }
+
+export default Footer;

@@ -1,7 +1,7 @@
-﻿import React, { Component } from 'react';
+﻿import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-export class Zusatz extends Component {
+class Zusatz extends React.Component {
     render() {
         return (
             <div>
@@ -26,3 +26,5 @@ export class Zusatz extends Component {
         );
     }
 }
+
+export default Zusatz;

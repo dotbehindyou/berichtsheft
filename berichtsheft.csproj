@@ -11,13 +11,55 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\NewFolder\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\NewFolder\**" />
+    <EmbeddedResource Remove="ClientApp\src\NewFolder\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\NewFolder\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\components\BH\BerichtsheftBlatt.tsx" />
+    <None Remove="ClientApp\src\components\BH\Body.tsx" />
+    <None Remove="ClientApp\src\components\BH\Footer.tsx" />
+    <None Remove="ClientApp\src\components\BH\Head.tsx" />
+    <None Remove="ClientApp\src\components\BH\Zusatz.tsx" />
+    <None Remove="ClientApp\src\components\Home.tsx" />
+    <None Remove="ClientApp\src\components\Layout.tsx" />
+    <None Remove="ClientApp\src\components\NavMenu.tsx" />
+    <None Remove="ClientApp\src\store\bh.actions.ts" />
+    <None Remove="ClientApp\src\store\bh.reducer.ts" />
+    <None Remove="ClientApp\src\store\bh.types.ts" />
+    <None Remove="ClientApp\src\types\report.types.ts" />
+    <None Remove="ClientApp\src\__api.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\components\BH\BerichtsheftBlatt.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\BH\Body.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\BH\Footer.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\BH\Head.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\BH\Zusatz.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\Home.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\Layout.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\NavMenu.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\store\bh.actions.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\bh.reducer.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\bh.types.ts" />
+    <TypeScriptCompile Include="ClientApp\src\types\report.types.ts" />
+    <TypeScriptCompile Include="ClientApp\src\__api.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

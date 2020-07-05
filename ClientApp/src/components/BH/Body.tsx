@@ -1,7 +1,11 @@
-﻿import React, { Component } from 'react';
+﻿import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-export class Body extends Component {
+type BodyType = {
+    kweek: number
+};
+
+class Body extends React.Component<BodyType, any> {
 
     render() {
         let kwoche = isNaN(this.props.kweek) ? -4 : this.props.kweek;
@@ -33,6 +37,9 @@ export class Body extends Component {
                     </Row>
                 </div>
             </div>
-                  );
+        );
     }
 }
+
+
+export default Body;
